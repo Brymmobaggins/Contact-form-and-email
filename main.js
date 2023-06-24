@@ -33,6 +33,9 @@ function submitForm(e){
     console.log(name)
     console.log(email)
     
+    // alert message
+
+    
 }
 // function to get form values
 
