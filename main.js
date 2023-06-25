@@ -25,13 +25,12 @@ function submitForm(e){
 
     // get value
     let name = getInputValue('name')
-    let company = getInputValue('company')
-    let phone = getInputValue('phone')
     let email = getInputValue('email')
     let message = getInputValue('message')
     
     console.log(name)
     console.log(email)
+    console.log(message)
     
     // alert message
 

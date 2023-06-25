@@ -15,42 +15,37 @@
     --light: #f8f8f8;
     --dark: #3a3a3a;
     --ft-family: tahoma;
+    --input-bg: #f1f1f1;
 
 }
 
 
 html {
     font-size: 62.5%;
-    height: 100%;
 }
 
 body {
     font-family: var(--ft-family);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--dark);
     color: var(--light);
 }
-
-/* background image styling */
-.bg-img {
-    background-image: url(/img/img_1.jpeg);
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    min-height: 700px;
-
-h2 {
-    text-align: center;
+.contact-header{
+    text-align:center ;
+    font-size: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    /* line-height: 5px; */
 }
 
+
 .container {
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    border: 1px solid red;
     max-width: 100%;
-    padding: 16px;
-    border-radius: 6px;
     width: 400px;
+    padding: 16px;
 }
 
 input,
@@ -59,8 +54,12 @@ textarea {
     display: block;
     font-size: 18px;
     padding: 12px;
-    border-radius: 6px;
+    border-radius: 5px;
     margin: 6px 0 16px 0;
+}
+input[type=text]:focus {
+    background-color: #ddd;
+    outline: none;
 }
 
 input[type="submit"] {
@@ -69,18 +68,32 @@ input[type="submit"] {
     border-radius: 4px;
     cursor: pointer;
     background-color: var(--success);
-    color: white;
+    color: var(--light);
+    font-size: 15px;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+input[type="submit"]:hover {
+    opacity: 1;
 }
 
 label {
-    font-size: 16px;
+    font-size: 15px;
+   
 }
 
-/* phone size */
-@media screen and (min-width: 350px) {
-    /* body {
-        background-color: yellow;
-    } */
+textarea {
+    font-size: 15px;
+    font-family: var(--ft-family);
+}
+
+/* phone size {small screen sizes} */
+@media screen and (max-width: 350px) {
+
+
+
+
     /* .container{
         width: 50%;
     } */
