@@ -41,9 +41,7 @@ form {
     border-radius: 10px;
 }
 
-form h3 {
-    text-align: center;
-}
+
 
 input,
 textarea {
@@ -77,15 +75,18 @@ input[type="submit"] {
 input[type="submit"]:hover {
     opacity: 1;
 }
-
+::placeholder{
+    font-family: var(--ft-family);
+    font-size: 14px;
+}
 label {
-    font-size: 18px;
+    font-size: 16px;
     display: inline-block;
 
 }
 
 textarea {
-    font-size: 15px;
+    font-size: 14px;
     font-family: var(--ft-family);
 }
 
