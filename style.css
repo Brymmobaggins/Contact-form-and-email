@@ -19,6 +19,20 @@
 
 }
 
+.show-success{
+    /* width: 100%; */
+    position: absolute;
+    top: 40px;
+    right: 0;
+    left: 0;
+    padding: 20px;
+    background-color: transparent;
+    text-align:center;
+    color: var(--info);
+    font-family: var(--ft-family);
+
+}
+
 .container {
     font-family: var(--ft-family);
     display: flex;
