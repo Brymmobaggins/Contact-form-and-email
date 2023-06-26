@@ -19,33 +19,30 @@
 
 }
 
-
-html {
-    font-size: 62.5%;
-}
-
-body {
+.container {
     font-family: var(--ft-family);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: var(--dark);
-    color: var(--light);
-}
-.contact-header{
-    text-align:center ;
-    font-size: 20px;
-    margin-bottom: 10px;
     width: 100%;
-    /* line-height: 5px; */
+    background: var(--dark);
+    color: var(--dark);
+
 }
 
+form {
+    background: var(--light);
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 600px;
+    padding: 2vw 4vw;
+    border-radius: 10px;
+}
 
-.container {
-    max-width: 100%;
-    width: 400px;
-    padding: 16px;
+form h3 {
+    text-align: center;
 }
 
 input,
@@ -55,8 +52,10 @@ textarea {
     font-size: 18px;
     padding: 12px;
     border-radius: 5px;
-    margin: 6px 0 16px 0;
+    margin: 5px 0 16px 0;
+    font-family: var(--ft-family);
 }
+
 input[type=text]:focus {
     background-color: #ddd;
     outline: none;
@@ -72,6 +71,7 @@ input[type="submit"] {
     font-size: 15px;
     letter-spacing: 1px;
     opacity: 0.9;
+    outline: 0;
 }
 
 input[type="submit"]:hover {
@@ -79,8 +79,9 @@ input[type="submit"]:hover {
 }
 
 label {
-    font-size: 15px;
-   
+    font-size: 18px;
+    display: inline-block;
+
 }
 
 textarea {
@@ -91,12 +92,6 @@ textarea {
 /* phone size {small screen sizes} */
 @media screen and (max-width: 350px) {
 
-
-
-
-    /* .container{
-        width: 50%;
-    } */
 
 }
 
