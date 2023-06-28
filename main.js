@@ -1,31 +1,33 @@
-// firebase configuration
+let popup = document.getElementById('popup')
+const input = document.querySelector('input')
+const form = document.getElementById('contact-form')
 
-const firebaseConfig = {
-    apiKey: "AIzaSyDZDtsrIvrMB5Ek8tYLmpQZ3VbZkVmHp2Y",
-    authDomain: "tutorial-5988c.firebaseapp.com",
-    projectId: "tutorial-5988c",
-    storageBucket: "tutorial-5988c.appspot.com",
-    messagingSenderId: "1053997992028",
-    appId: "1:1053997992028:web:5b3b6588e3a41cbfe73e99",
-    measurementId: "G-NN4SZNCJZH"
-};
+form.addEventListener("submit", function (e) {
+    e.preventDefault() // prevent submission
+    // openPopUp()
+    inputValue()
+    // closeform()
+})
 
-// listen for from form submit\
-document.getElementById("contact-form").addEventListener("submit",submitForm)
+function inputValue(phonenumber, message) {
 
-function submitForm(e){
-    e.preventDefault();
-    showSuccess()
+    let name = document.getElementById("name").value
+    let email = document.getElementById("email").value
 
+    if (!name || !email) {
+        return false
+
+    }
 }
-// function to get form values
 
-// function getInputValue(id){
-//     return document.getElementById(id).value
-// }
 
-function showSuccess(){
-    // alert('Message Sent')
-    
+function openPopUp() {
+    popup.classList.add("open-popup")
+    setTimeout(() => {
+        popup.classList.remove("open-popup")
+    }, 2000);
+}
 
+function closeform() {
+    document.getElementById("contact-form").style.display = "none"
 }
