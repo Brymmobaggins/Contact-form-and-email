@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+/* color */
 :root {
     --primary: #f79e1b;
     --secondary: #ffcc00;
@@ -19,20 +20,49 @@
 
 }
 
-.show-success{
-    /* width: 100%; */
+/* styling pop up */
+.pop-up {
     position: absolute;
-    top: 40px;
-    right: 0;
-    left: 0;
-    padding: 20px;
-    background-color: transparent;
-    text-align:center;
-    color: var(--info);
+    width: 60%;
+    max-width: 300px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    padding: 5px 10px;
+    background: var(--input-bg);
+    border-radius:8px;
+    text-align: center;
     font-family: var(--ft-family);
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
 
 }
 
+.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* pop image */
+.pop-up img {
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.pop-up h2 {
+    font-weight: 500;
+    margin: 10px 0;
+}
+/* show error */
+.show-error{
+    border:1px solid var(--danger);
+}
+
+/*  */
+/* style container */
 .container {
     font-family: var(--ft-family);
     display: flex;
@@ -42,9 +72,11 @@
     width: 100%;
     background: var(--dark);
     color: var(--dark);
+    /* opacity: 0.3; */
 
 }
 
+/* form */
 form {
     background: var(--light);
     display: flex;
@@ -68,19 +100,18 @@ textarea {
     font-family: var(--ft-family);
 }
 
+/* input */
 input[type=text]:focus {
     background-color: #ddd;
     outline: none;
 }
 
 input[type="submit"] {
-    border-radius: 4px;
+    border-radius: 5px;
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
     background-color: var(--success);
     color: var(--light);
-    font-size: 15px;
+    font-size: 18px;
     letter-spacing: 1px;
     opacity: 0.9;
     outline: 0;
@@ -88,11 +119,14 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     opacity: 1;
+    cursor: pointer;
 }
-::placeholder{
+
+::placeholder {
     font-family: var(--ft-family);
     font-size: 14px;
 }
+
 label {
     font-size: 16px;
     display: inline-block;
@@ -104,11 +138,10 @@ textarea {
     font-family: var(--ft-family);
 }
 
+/* phone sizes and screen responsiveness */
+
 /* phone size {small screen sizes} */
-@media screen and (max-width: 350px) {
-
-
-}
+@media screen and (max-width: 350px) {}
 
 /* tablet size */
 @media screen and (min-width: 700px) {}

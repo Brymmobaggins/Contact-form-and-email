@@ -4,20 +4,31 @@ const form = document.getElementById('contact-form')
 
 form.addEventListener("submit", function (e) {
     e.preventDefault() // prevent submission
-    // openPopUp()
-    inputValue()
-    // closeform()
+    openPopUp()
+    // validateForm()
+    closeform()
+    // displayError(message)
 })
 
-function inputValue(phonenumber, message) {
+function validateForm() {
 
     let name = document.getElementById("name").value
     let email = document.getElementById("email").value
+    let message = document.getElementById("message").value
+    let phone = document.getElementById("phone").value
 
-    if (!name || !email) {
+
+    if (!name || !email || !message || !phone) {
         return false
-
     }
+    return true
+}
+
+
+function displayError(message) {
+    let errorEl = document.getElementById('error')
+    errorEl.innerHTML = message
+    errorEl.style.display = "block"
 }
 
 
